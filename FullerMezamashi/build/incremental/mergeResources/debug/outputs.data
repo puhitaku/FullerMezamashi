@@ -1,13 +1,13 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1376532589000 339 c6f86c58f16d04431b2db2b103da967f7f13b4c2 /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/values-v14/values.xml
-1376619598000 1266 e891cdf7180f1c1855c5a7d53fbffc3978947d7e /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/values/values.xml
-1376532589000 3373 3c5ebd59c015d9ac59023235afc82f27f8fbfc43 /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/drawable-mdpi/ic_launcher.png
-1376532589000 256 176b4e8e3a3c5a3a6db1b4877e0efc414ae09d60 /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/values-sw720dp-land/values.xml
-1376532589000 325 aa24c12d4944aa941d74b764b92b3fa359202b7c /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/values-v11/values.xml
-1376532589000 5358 795fa0c7a31d2b925ef23fe72a67d690575fabe5 /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/drawable-hdpi/ic_launcher.png
-1376532589000 356 d90abea519f6deaa56da9f064a6a506b6839aa64 /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/menu/setting.xml
-1376532589000 7192 eb6e4d0859d55924afd8f7916bb74faf6ffa0772 /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/drawable-xhdpi/ic_launcher.png
-1376532589000 11759 0daa6c3d4b4c437deb0d30655afec44cc5a0f4b2 /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/drawable-xxhdpi/ic_launcher.png
-1376619598000 1608 3ffc3ecdfa07dbfa6ffc17193a7d20063148ed6a /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/build/res/all/debug/layout/activity_setting.xml
+1376646217338 339 c4eaf9f7d77bfc7de336c974888c71f70ba96a81 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\values-v14\values.xml
+1376646217345 325 cf4aa5d3a93746a3fbff0f38ec4cbf0bb081ebc3 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\values-v11\values.xml
+1376646217385 354 2081cbeb9f6cc1ec2b12a316b5e73bfc451b50e9 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\menu\setting.xml
+1376631745257 5358 795fa0c7a31d2b925ef23fe72a67d690575fabe5 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\drawable-hdpi\ic_launcher.png
+1376646217741 1638 6c7db752c20341250fba147e68a0a378d6628d18 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\layout\activity_setting.xml
+1376646217397 254 18bce398f1d7a3368e313fc34d8f199869db7135 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\values-sw720dp-land\values.xml
+1376631745462 3373 3c5ebd59c015d9ac59023235afc82f27f8fbfc43 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\drawable-mdpi\ic_launcher.png
+1376646217328 1265 d0a6d002566b8c8c9d08903b982b230194aca167 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\values\values.xml
+1376631745694 11759 0daa6c3d4b4c437deb0d30655afec44cc5a0f4b2 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\drawable-xxhdpi\ic_launcher.png
+1376631745396 7192 eb6e4d0859d55924afd8f7916bb74faf6ffa0772 C:\Users\lapis_000\pg\FullerMezamashi\FullerMezamashi\build\res\all\debug\drawable-xhdpi\ic_launcher.png
