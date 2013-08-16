@@ -3,6 +3,12 @@
 
     <string name="app_name">Fuller Mezamashi</string>
     <string name="action_settings">Settings</string>
+
+    //Text Label
     <string name="hello_world">Hello world!</string>
+    <string name="choose">時間をえらんでください</string>
+
+    //Button
+    <string name="set_time">セット！</string>
 
 </resources>
