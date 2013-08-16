@@ -2,10 +2,10 @@
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
 1376532538000 6063 4f6d388913efc52530c541ecf93d2b59dea44445 /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/drawable-xhdpi/ic_launcher.png
-1376532538000 652 456242336daf8fba71a84af253a687f2ca44b86b /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/layout/activity_setting.xml
+1376570251000 652 456242336daf8fba71a84af253a687f2ca44b86b /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/layout/activity_setting.xml
 1376532538000 9880 dfa94b6c78cd50dc3d777587d73148df59cf229f /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/drawable-xxhdpi/ic_launcher.png
 1376532538000 381 b129b276e01126de5b3b753572ac67cbfc19454c /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/values-v14/styles.xml
-1376532538000 226 dd371c178a5e943eecace6378d9f09eeb4f5d51a /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/values/strings.xml
+1376570251000 226 dd371c178a5e943eecace6378d9f09eeb4f5d51a /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/values/strings.xml
 1376532538000 211 4e1904afba59d31e5cd6133f6a4c360fa9a5913f /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/values/dimens.xml
 1376532538000 324 aa1f5f1723de9aee2669dc44a26fbc0ce776d35f /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/values-v11/styles.xml
 1376532538000 4492 b6079699e333101748d091cb86b6e957278153e0 /home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/drawable-hdpi/ic_launcher.png
