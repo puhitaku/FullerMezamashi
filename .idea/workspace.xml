@@ -21,12 +21,8 @@
     </layouts>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="304352ca-0c6f-439d-8917-a4907ea44d5c" name="Default" comment="Created activity">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
-    <list id="caf2d25e-47ab-4467-8798-a6e50cad4b2a" name="Rejected commit: Default" comment="Here it comes">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java" afterPath="$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java" />
-    </list>
+    <list default="true" id="304352ca-0c6f-439d-8917-a4907ea44d5c" name="Default" comment="Created activity" />
+    <list id="caf2d25e-47ab-4467-8798-a6e50cad4b2a" name="Rejected commit: Default" comment="Here it comes" />
     <ignored path="FullerMezamashi.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="FullerMezamashi/build/" />
@@ -637,7 +633,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="51" width="1366" height="693" extended-state="6" />
+    <frame x="0" y="51" width="1366" height="693" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
