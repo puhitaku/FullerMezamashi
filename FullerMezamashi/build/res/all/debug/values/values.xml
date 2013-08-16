@@ -7,7 +7,9 @@
     <!-- From: file:/home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/values/strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="app_name">Fuller Mezamashi</string>
+    <string name="choose">時間をえらんでください</string>
     <string name="hello_world">Hello world!</string>
+    <string name="set_time">セット！</string>
     <!-- From: file:/home/puhitaku/Development/android/F_Mezamashi/FullerMezamashi/src/main/res/values/styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

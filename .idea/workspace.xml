@@ -21,7 +21,10 @@
     </layouts>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="304352ca-0c6f-439d-8917-a4907ea44d5c" name="Default" comment="Created activity" />
+    <list default="true" id="304352ca-0c6f-439d-8917-a4907ea44d5c" name="Default" comment="Created activity">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java" afterPath="$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <list id="caf2d25e-47ab-4467-8798-a6e50cad4b2a" name="Rejected commit: Default" comment="Here it comes" />
     <ignored path="FullerMezamashi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,11 +94,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SettingActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SettingActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="50" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="540">
-              <folding />
+            <state line="15" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="0.3314917" vertical-offset="0" max-vertical-offset="648">
+              <folding>
+                <element signature="e#515#724#0" expanded="true" />
+                <element signature="e#713#714#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,13 +109,13 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="26" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+            <state line="11" column="26" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_setting.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="activity_setting.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/res/layout/activity_setting.xml">
           <provider editor-type-id="text-editor">
             <state line="4" column="36" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="792">
@@ -180,9 +186,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java" />
         <option value="$PROJECT_DIR$/FullerMezamashi/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/FullerMezamashi/src/main/res/layout/activity_setting.xml" />
+        <option value="$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java" />
       </list>
     </option>
   </component>
@@ -245,8 +251,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -449,6 +453,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -465,11 +471,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="JellyBean" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Android Application.FullerMezamashi">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -633,13 +639,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="51" width="1366" height="693" extended-state="7" />
+    <frame x="0" y="51" width="1366" height="693" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.67132866" order="4" side_tool="false" content_ui="tabs" x="1369" y="108" width="1440" height="873" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986014" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -653,12 +658,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21320182" sideWeight="0.28671327" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.67132866" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2128788" sideWeight="0.67132866" order="0" side_tool="false" content_ui="combo" x="1560" y="259" width="683" height="692" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2128788" sideWeight="0.67132866" order="0" side_tool="false" content_ui="combo" x="1560" y="259" width="683" height="692" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.67132866" order="4" side_tool="false" content_ui="tabs" x="1369" y="108" width="1440" height="873" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -726,6 +732,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/res/layout/activity_setting.xml">
+      <provider editor-type-id="text-editor">
+        <state line="4" column="36" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="252">
@@ -736,7 +752,10 @@
     <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="50" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="594">
-          <folding />
+          <folding>
+            <element signature="e#515#724#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -760,7 +779,10 @@
     <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="5" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="540">
-          <folding />
+          <folding>
+            <element signature="e#515#724#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -812,13 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="50" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="594">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="26" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
@@ -834,6 +849,16 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FullerMezamashi/src/main/java/jp/co/fuller/fullermezamashi/SettingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="0.3314917" vertical-offset="0" max-vertical-offset="648">
+          <folding>
+            <element signature="e#515#724#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
