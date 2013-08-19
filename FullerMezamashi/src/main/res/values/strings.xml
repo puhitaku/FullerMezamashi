@@ -9,6 +9,10 @@
     <string name="choose">時間をえらんでください</string>
 
     //Button
+    <string name="select_oji">おじ</string>
+    <string name="select_alarm">アラーム</string>
+    <string name="select_stopwatch">ストップウォッチ</string>
+    <string name="select_timer">タイマー</string>
     <string name="set_time">セット！</string>
 
 </resources>

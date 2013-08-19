@@ -12,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/choose"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="130dp"
         android:id="@+id/textView"/>
 
     <TimePicker
@@ -34,5 +34,41 @@
             android:layout_below="@+id/timePicker"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="33dp"/>
+
+    <Button
+            android:layout_width="85dp"
+            android:layout_height="75dp"
+            android:text="@string/select_oji"
+            android:id="@+id/btnOji"
+            android:layout_marginTop="-5dp"
+            android:layout_marginLeft="-5dp"
+            android:textSize="15sp"/>
+
+    <Button
+            android:layout_width="85dp"
+            android:layout_height="75dp"
+            android:id="@+id/btnAlarm"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="-5dp"
+            android:textSize="15sp"
+            android:text="@string/select_alarm"/>
+
+    <Button
+            android:layout_width="85dp"
+            android:layout_height="75dp"
+            android:text="@string/select_stopwatch"
+            android:id="@+id/btnSW"
+            android:layout_marginLeft="176dp"
+            android:textSize="15sp"
+            android:layout_marginTop="-5dp"/>
+
+    <Button
+            android:layout_width="85dp"
+            android:layout_height="75dp"
+            android:text="@string/select_timer"
+            android:id="@+id/btnTimer"
+            android:textSize="15sp"
+            android:layout_marginLeft="267dp"
+            android:layout_marginTop="-5dp"/>
 
 </RelativeLayout>
