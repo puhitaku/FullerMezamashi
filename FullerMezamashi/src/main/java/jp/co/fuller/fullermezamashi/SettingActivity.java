@@ -2,6 +2,9 @@ package jp.co.fuller.fullermezamashi;
 
 import android.app.Activity;
 import android.app.KeyguardManager;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.Vibrator;
@@ -25,9 +28,20 @@ public class SettingActivity extends Activity {
             public void onClick(View view) {
                 TimePicker pkrTime = (TimePicker)findViewById(R.id.timePicker);
                 wakeSoon( pkrTime );
-                Toast.makeText(SettingActivity.this, "Whoa!", Toast.LENGTH_SHORT).show();
             }
         });
+
+        TimePicker timepkrAlarm = (TimePicker)findViewById(R.id.timePicker);
+        timepkrAlarm.setIs24HourView(true);
+
+    }
+
+    private class timerReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            //MediaPlayer mp =
+        }
     }
 
     public void wakeSoon(TimePicker picker) {
