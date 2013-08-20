@@ -53,25 +53,21 @@ public class AlarmService extends Service {
         return false;
     }
 
+    public long getTimeInSecond(Time t) {
+        return t.second + t.minute * 60 + t.hour * 3600;
+    }
+
     public void ringAlarm(android.widget.TimePicker pkrTime) {
-        long ringHrs, ringMin, oneDayMilliSec, untilZeroOClock, afterZeroOClock, wTime;
+        long oneDayMilliSec, untilZeroOClock, afterZeroOClock, wTime;
+        int ringHrs, ringMin;
         Time timeNow = new Time();
+        timeNow.setToNow();
         Time timeAlarm = timeNow;
         TimeZone tz = TimeZone.getTimeZone("Asia/Tokyo");
 
         oneDayMilliSec = 1000 * 60 * 60 * 24;   //1日が何ミリ秒かを計算
         ringHrs = pkrTime.getCurrentHour();
         ringMin = pkrTime.getCurrentMinute();
-
-        timeAlarm.set(0, (int)ringMin, (int)ringHrs, timeAlarm.monthDay, timeAlarm.month, timeAlarm.year);
-        timeNow.setToNow();
-
-        if(timeNow.before(timeAlarm)) {
-            timeAlarm.set(timeAlarm.monthDay + 1, timeAlarm.month, timeAlarm.year);
-        }
-
-        untilZeroOClock = (System.currentTimeMillis() + tz.getRawOffset()) % oneDayMilliSec / 1000 ;    //
-        afterZeroOClock = timeAlarm.second + timeAlarm.minute * 60 + timeAlarm.hour * 3600;
 
         if (timer != null) {
             timer.cancel();
@@ -84,7 +80,24 @@ public class AlarmService extends Service {
                 sendBroadcast(new Intent(RING));
             }
         };
-        timer.schedule(tTask, untilZeroOClock + afterZeroOClock);
+        timeAlarm.set(0, ringMin, ringHrs, timeAlarm.monthDay, timeAlarm.month, timeAlarm.year);
+
+        if(timeAlarm.before(timeNow)) {
+            //timeAlarm.set(timeAlarm.monthDay + 1, timeAlarm.month, timeAlarm.year);
+            untilZeroOClock = (System.currentTimeMillis() + tz.getRawOffset()) % oneDayMilliSec / 1000 ;    //
+            afterZeroOClock = getTimeInSecond(timeAlarm);
+            wTime = untilZeroOClock + afterZeroOClock;
+        } else {
+            wTime = getTimeInSecond(timeAlarm) - getTimeInSecond(timeNow);
+        }
+
+        Toast.makeText(getApplicationContext(),
+                "timeAlarm= " + ((Integer)(int)getTimeInSecond(timeAlarm)).toString() + "timeNow= " + ((Integer)(int)getTimeInSecond(timeNow)).toString(), Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),
+                "Alarm will ring after " + ((Integer)(int)wTime).toString() + " seconds",
+                Toast.LENGTH_LONG).show();
+
+        timer.schedule(tTask, wTime * 1000);
     }
 }
 
