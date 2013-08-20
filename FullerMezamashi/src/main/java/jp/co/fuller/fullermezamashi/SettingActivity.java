@@ -1,78 +1,85 @@
 package jp.co.fuller.fullermezamashi;
 
 import android.app.Activity;
-import android.app.KeyguardManager;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.ServiceConnection;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.PowerManager;
-import android.os.Vibrator;
-import android.text.format.Time;
+import android.os.IBinder;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 public class SettingActivity extends Activity {
+    private class timerReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            MediaPlayer mp = MediaPlayer.create(SettingActivity.this, R.raw.ryori);
+            try {
+                mp.start();
+            } catch (Exception e) {
+
+            }
+        }
+    }
+
+    private AlarmService service;
+    private final  timerReceiver receiver = new timerReceiver();
+    private ServiceConnection connection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            service = ((AlarmService.AlarmServiceBinder)iBinder).getService();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+            service = null;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
+        TimePicker timepkrAlarm = (TimePicker)findViewById(R.id.timePicker);
+        timepkrAlarm.setIs24HourView(true);
+
         Button btnSet = (Button)findViewById(R.id.btnSet);
         btnSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 TimePicker pkrTime = (TimePicker)findViewById(R.id.timePicker);
-                wakeSoon( pkrTime );
+                service.ringAlarm(pkrTime);
+                moveTaskToBack(true);
             }
         });
 
-        TimePicker timepkrAlarm = (TimePicker)findViewById(R.id.timePicker);
-        timepkrAlarm.setIs24HourView(true);
+        /* Start service */
+        Intent intent = new Intent(this, AlarmService.class);
+        startService(intent);
+        IntentFilter filter = new IntentFilter(service.RING);
+        registerReceiver(receiver, filter);
 
+        /* Bind the service */
+        bindService(intent, connection, Context.BIND_AUTO_CREATE);
+
+        /* Re-bind after unbind */
+        unbindService(connection);
+        bindService(intent, connection, Context.BIND_AUTO_CREATE);
     }
 
-    private class timerReceiver extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            //MediaPlayer mp =
-        }
-    }
-
-    public void wakeSoon(TimePicker picker) {
-        Integer hrs = picker.getCurrentHour();
-        Integer min = picker.getCurrentMinute();
-        PowerManager.WakeLock wakelock;
-        KeyguardManager keyguard;
-        KeyguardManager.KeyguardLock keylock;
-        Vibrator vib = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-
-        Toast.makeText(SettingActivity.this, "アラームは" + hrs.toString() + "時" + min.toString() + "分" + "にセットされています",
-                    Toast.LENGTH_SHORT).show();
-
-        Time time = new Time("Asia/Tokyo");
-        time.setToNow();
-        //while(time.hour != hrs && time.minute != min) {
-        //}
-
-        vib.vibrate(100);
-
-        /*
-        wakelock = ((PowerManager) getSystemService(Context.POWER_SERVICE))
-                .newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK
-                                |PowerManager.ACQUIRE_CAUSES_WAKEUP
-                                |PowerManager.ON_AFTER_RELEASE, "disableLock");
-        wakelock.acquire();
-
-        keyguard = (KeyguardManager) getSystemService(Context.KEYGUARD_SERVICE);
-        keylock = keyguard.newKeyguardLock("disableLock");
-        keylock.disableKeyguard();
-        */
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbindService(connection);
+        unregisterReceiver(receiver);
+        service.stopSelf();
     }
 
     @Override

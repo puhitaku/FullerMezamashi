@@ -4,8 +4,10 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
+import android.text.format.Time;
 import android.widget.Toast;
 
+import java.util.TimeZone;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -51,21 +53,38 @@ public class AlarmService extends Service {
         return false;
     }
 
-    public void ringAlarm(long rtime) {
+    public void ringAlarm(android.widget.TimePicker pkrTime) {
+        long ringHrs, ringMin, oneDayMilliSec, untilZeroOClock, afterZeroOClock, wTime;
+        Time timeNow = new Time();
+        Time timeAlarm = timeNow;
+        TimeZone tz = TimeZone.getTimeZone("Asia/Tokyo");
+
+        oneDayMilliSec = 1000 * 60 * 60 * 24;   //1日が何ミリ秒かを計算
+        ringHrs = pkrTime.getCurrentHour();
+        ringMin = pkrTime.getCurrentMinute();
+
+        timeAlarm.set(0, (int)ringMin, (int)ringHrs, timeAlarm.monthDay, timeAlarm.month, timeAlarm.year);
+        timeNow.setToNow();
+
+        if(timeNow.before(timeAlarm)) {
+            timeAlarm.set(timeAlarm.monthDay + 1, timeAlarm.month, timeAlarm.year);
+        }
+
+        untilZeroOClock = (System.currentTimeMillis() + tz.getRawOffset()) % oneDayMilliSec / 1000 ;    //
+        afterZeroOClock = timeAlarm.second + timeAlarm.minute * 60 + timeAlarm.hour * 3600;
+
         if (timer != null) {
             timer.cancel();
         }
-
         timer = new Timer();
-        TimerTask tTask = new TimerTask() {
 
+        TimerTask tTask = new TimerTask() {
             @Override
             public void run() {
                 sendBroadcast(new Intent(RING));
             }
         };
-
-        timer.schedule(tTask, rtime);
+        timer.schedule(tTask, untilZeroOClock + afterZeroOClock);
     }
 }
 
