@@ -14,5 +14,10 @@
     <string name="select_stopwatch">ストップウォッチ</string>
     <string name="select_timer">タイマー</string>
     <string name="set_time">セット！</string>
+    <string name="choose_time">時間:</string>
+    <string name="choose_date">日付:</string>
+    <string name="taphere">ここをタップして\n時間をセットするおじ!</string>
+    <string name="testtime">12月23日\n12:34</string>
+    <string name="time_alarm">アラーム時間</string>
 
 </resources>
