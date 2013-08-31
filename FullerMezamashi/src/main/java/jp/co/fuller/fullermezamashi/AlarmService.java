@@ -4,7 +4,6 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
-import android.text.format.Time;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -43,23 +42,22 @@ public class AlarmService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        Toast.makeText(getApplicationContext(), "AlarmService: onBind()", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "AlarmService: onBind()", Toast.LENGTH_SHORT).show();
         return new AlarmServiceBinder();
     }
 
     @Override
     public boolean onUnbind(Intent intent) {
-        Toast.makeText(getApplicationContext(), "AlarmService: onUnbind()", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "AlarmService: onUnbind()", Toast.LENGTH_SHORT).show();
         return false;
-    }
-
-    public long getTimeInSecond(Time t) {
-        return t.second + t.minute * 60 + t.hour * 3600;
     }
 
     public void ringAlarm(Calendar time) {
         long wTime;
         Calendar now = Calendar.getInstance();
+        now.setTimeInMillis(System.currentTimeMillis());
+        //now.setTimeZone(TimeZone.getTimeZone("Asia/Tokyo"));
+        //now.set(_now.year, _now.month, _now.monthDay, _now.hour, _now.minute, _now.second);
 
         if (timer != null) {    //新しくタイマー生成
             timer.cancel();
@@ -71,15 +69,19 @@ public class AlarmService extends Service {
             @Override
             public void run() {
                 sendBroadcast(new Intent(RING));
+                Intent intent = new Intent(getBaseContext(), SettingActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplication().startActivity(intent);
             }
         };
 
+        //wTime = time.getTimeInMillis()+time.getTimeZone().getOffset(time.getTimeInMillis()) - now.getTimeInMillis()+now.getTimeZone().getOffset(now.getTimeInMillis());
         wTime = time.getTimeInMillis() - now.getTimeInMillis();
 
+        //Toast.makeText(getApplicationContext(),
+        //        "time= " + String.valueOf(time.getTime()) + "\ntimeNow= " + String.valueOf(now.getTime()), Toast.LENGTH_LONG).show();
         Toast.makeText(getApplicationContext(),
-                "time= " + String.valueOf(time.getTimeInMillis()) + "timeNow= " + String.valueOf(now.getTimeInMillis()), Toast.LENGTH_LONG).show();
-        Toast.makeText(getApplicationContext(),
-                "Alarm will ring after " + String.valueOf(wTime/1000) + " seconds",
+                "アラームは" + String.valueOf(wTime/1000/60) + "分" + String.valueOf(wTime/1000%60) + "秒後にセットされています",
                 Toast.LENGTH_LONG).show();
 
         timer.schedule(tTask, wTime);

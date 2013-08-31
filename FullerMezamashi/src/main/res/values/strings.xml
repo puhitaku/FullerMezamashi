@@ -3,21 +3,20 @@
 
     <string name="app_name">Fuller Mezamashi</string>
     <string name="action_settings">Settings</string>
-
-    //Text Label
-    <string name="hello_world">Hello world!</string>
+    //Text Label    <string name="hello_world">Hello world!</string>
     <string name="choose">時間をえらんでください</string>
-
-    //Button
-    <string name="select_oji">おじ</string>
+    //Button    <string name="select_oji">おじ</string>
     <string name="select_alarm">アラーム</string>
     <string name="select_stopwatch">ストップウォッチ</string>
     <string name="select_timer">タイマー</string>
     <string name="set_time">セット！</string>
-    <string name="choose_time">時間:</string>
-    <string name="choose_date">日付:</string>
+    <string name="choose_time">時間をセット</string>
+    <string name="choose_date">日付をセット</string>
     <string name="taphere">ここをタップして\n時間をセットするおじ!</string>
     <string name="testtime">12月23日\n12:34</string>
     <string name="time_alarm">アラーム時間</string>
+    <string name="title_activity_ringing">RingingActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

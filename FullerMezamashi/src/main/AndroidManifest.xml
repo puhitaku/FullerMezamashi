@@ -4,7 +4,7 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-sdk
         android:minSdkVersion="7"
@@ -24,7 +24,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".AlarmService"/>
+
+        <service android:name="jp.co.fuller.fullermezamashi.AlarmService" />
+
+        <activity
+            android:name="jp.co.fuller.fullermezamashi.RingingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_ringing"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
     </application>
 
 </manifest>
