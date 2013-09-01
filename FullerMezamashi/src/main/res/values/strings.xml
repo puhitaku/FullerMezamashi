@@ -10,13 +10,18 @@
     <string name="select_stopwatch">ストップウォッチ</string>
     <string name="select_timer">タイマー</string>
     <string name="set_time">セット！</string>
-    <string name="choose_time">時間をセット</string>
-    <string name="choose_date">日付をセット</string>
-    <string name="taphere">ここをタップして\n時間をセットするおじ!</string>
+    <string name="choose_time">時間を選択</string>
+    <string name="choose_date">日付を選択</string>
+    <string name="taphere">ここをタップして\nアラームセット完了おじ!</string>
     <string name="testtime">12月23日\n12:34</string>
     <string name="time_alarm">アラーム時間</string>
     <string name="title_activity_ringing">RingingActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="hereitis">時間になりました！</string>
+    <string name="test_time">12:34</string>
+    <string name="alarm_snooze">スヌーズ</string>
+    <string name="alarm_stop">止める</string>
 
 </resources>

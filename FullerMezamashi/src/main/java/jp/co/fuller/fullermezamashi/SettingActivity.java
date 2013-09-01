@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.view.Menu;
@@ -28,13 +27,25 @@ public class SettingActivity extends Activity {
     private class timerReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
+            /*
             MediaPlayer mp = MediaPlayer.create(SettingActivity.this, R.raw.ryori);
             try {
                 mp.start();
             } catch (Exception e) {
-
             }
+            */
+            Intent actvRing = new Intent(getBaseContext(), RingingActivity.class);
+            startActivity(actvRing);
         }
+    }
+
+    public String formatMinute(int _min) {
+        String min = String.valueOf(_min);
+
+        if(min.length() == 1) {
+            min = "0" + min;
+        }
+        return min;
     }
 
     private AlarmService service;
@@ -88,7 +99,7 @@ public class SettingActivity extends Activity {
                         String.valueOf(_month + 1) + "月" +
                         String.valueOf(_day) + "日\n" +
                         String.valueOf(hour) + ":" +
-                        String.valueOf(minute)
+                        formatMinute(minute)
                 );
                 ring.set(_year, _month, _day);
                 year = _year;
@@ -105,7 +116,7 @@ public class SettingActivity extends Activity {
                         String.valueOf(month + 1) + "月" +
                         String.valueOf(day) + "日\n" +
                         String.valueOf(_hour) + ":" +
-                        String.valueOf(_minute)
+                        formatMinute(_minute)
                 );
                 ring.set(year, month, day, _hour, _minute);
                 hour = _hour;
