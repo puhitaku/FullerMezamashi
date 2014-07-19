@@ -27,13 +27,13 @@ public class AlarmService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Toast.makeText(getApplicationContext(), "AlarmService: onCreate()", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "AlarmService: onCreate()", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Toast.makeText(getApplicationContext(), "AlarmService: onDestroy()", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "AlarmService: onDestroy()", Toast.LENGTH_SHORT).show();
         if (timer != null) {
             timer.cancel();
             timer = null;

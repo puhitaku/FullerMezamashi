@@ -90,6 +90,14 @@ public class SettingActivity extends Activity {
 
         final TextView txtTime = (TextView)findViewById(R.id.txtTime);
 
+        txtTime.setText(
+                String.valueOf(year) + "年" +
+                        String.valueOf(month + 1) + "月" +
+                        String.valueOf(day) + "日\n" +
+                        String.valueOf(hour) + ":" +
+                        formatMinute(minute)
+        );
+
         //Pickers' event listener
         DatePickerDialog.OnDateSetListener datepkrListener = new DatePickerDialog.OnDateSetListener() {
             @Override
