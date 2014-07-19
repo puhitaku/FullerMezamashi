@@ -14,3 +14,4 @@
 *.ipr
 *~
 *.swp
+build/*
